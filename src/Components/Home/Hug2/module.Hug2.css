@@ -1,0 +1,170 @@
+.hug2 {
+  width: 100%;
+  background: var(--color-bg);
+  padding: 80px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ── Left: text content ── */
+.hug2__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.hug2__text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  will-change: transform, opacity;
+}
+
+.hug2__eyebrow {
+  font-family: 'Figtree', var(--font-sans);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #cccccc;
+  margin: 0 0 12px;
+}
+
+.hug2__heading {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--color-text);
+  margin: 0 0 12px;
+}
+
+.hug2__body {
+  font-family: 'Figtree', var(--font-sans);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.61;
+  letter-spacing: 0.48px;
+  color: #cccccc;
+  margin: 0;
+  max-width: 582px;
+}
+
+/* ── CTA button ── */
+.hug2__cta-wrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hug2__cta {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 58px;
+  padding: 12px 38px;
+  font-family: 'Figtree', var(--font-sans);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.4px;
+  color: var(--color-text);
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hug2__cta:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.hug2__cta-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Right: calendar mockup ── */
+.hug2__mockup-wrap {
+  flex-shrink: 0;
+  width: 557px;
+  height: 527px;
+  will-change: transform, opacity;
+}
+
+.hug2__mockup {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .hug2 {
+    padding: 80px 40px;
+    gap: 40px;
+  }
+
+  .hug2__mockup-wrap {
+    width: 400px;
+    height: 380px;
+  }
+
+  .hug2__heading {
+    font-size: 32px;
+  }
+
+  .hug2__body {
+    font-size: 20px;
+    max-width: 100%;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hug2 {
+    flex-direction: column-reverse;
+    padding: 60px 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hug2__content {
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .hug2__text-group {
+    align-items: center;
+  }
+
+  .hug2__mockup-wrap {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 557 / 527;
+  }
+
+  .hug2__eyebrow {
+    font-size: 16px;
+  }
+
+  .hug2__heading {
+    font-size: 28px;
+  }
+
+  .hug2__body {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .hug2__cta {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}

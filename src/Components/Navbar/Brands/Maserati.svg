@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50">
+  <!-- Trident -->
+  <g transform="translate(18, 4)">
+    <line x1="12" y1="42" x2="12" y2="6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="6"  y1="42" x2="6"  y2="14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="18" y1="42" x2="18" y2="14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <polyline points="2,14 6,6 10,14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+    <polyline points="14,14 18,6 22,14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M8,6 Q12,0 16,6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="74" y="34" font-family="Georgia,serif" font-size="14" font-weight="bold"
+        fill="currentColor" text-anchor="middle" letter-spacing="2">MASERATI</text>
+</svg>

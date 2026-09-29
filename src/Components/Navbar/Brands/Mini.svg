@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50">
+  <!-- Circle emblem -->
+  <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <circle cx="25" cy="25" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="25" y="30" font-family="Arial Black,Arial,sans-serif" font-size="9" font-weight="900"
+        fill="currentColor" text-anchor="middle" letter-spacing="0">MINI</text>
+  <!-- MINI text -->
+  <text x="78" y="32" font-family="Arial Black,Arial,sans-serif" font-size="18" font-weight="900"
+        fill="currentColor" text-anchor="middle" letter-spacing="1">MINI</text>
+</svg>

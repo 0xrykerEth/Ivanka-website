@@ -1,0 +1,231 @@
+.navbar {
+  background: var(--color-bg);
+  padding: 0 80px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+
+.navbar__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+/* ── Desktop nav links ── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  padding: 2px 0;
+  transition: color 0.2s;
+}
+
+.navbar__link--active { color: var(--color-text); }
+.navbar__link:hover   { color: var(--color-text); }
+
+/* allow <Link> to share the same styles as <button> */
+a.navbar__link,
+a.navbar__mobile-link {
+  text-decoration: none;
+}
+
+.navbar__dropdown-trigger { position: static; }
+
+/* ── CTA pill ── */
+.navbar__cta {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 47px;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-text);
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.navbar__cta:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* ── Hamburger button — hidden on desktop ── */
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 4px;
+  line-height: 0;
+}
+
+/* ── Mobile drawer — hidden on desktop ── */
+.navbar__mobile-drawer {
+  display: none;
+}
+
+/* ══════════════════════════════════════
+   TABLET  769px – 1024px
+══════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 32px;
+  }
+
+  .navbar__links {
+    gap: 20px;
+  }
+
+  .navbar__link {
+    font-size: 14px;
+  }
+}
+
+/* ══════════════════════════════════════
+   MOBILE  ≤ 768px
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: auto;
+  }
+
+  .navbar__inner {
+    height: 60px;
+  }
+
+  /* hide desktop elements */
+  .navbar__links,
+  .navbar__cta--desktop {
+    display: none;
+  }
+
+  /* show hamburger */
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* mobile drawer */
+  .navbar__mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    animation: drawer-in 0.2s ease;
+  }
+
+  @keyframes drawer-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+
+  .navbar__mobile-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar__mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--color-text-muted);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: left;
+    transition: color 0.2s;
+  }
+
+  .navbar__mobile-link--active { color: var(--color-text); }
+  .navbar__mobile-link:hover   { color: var(--color-text); }
+
+  .navbar__mobile-link--expand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__mobile-chevron {
+    display: flex;
+    transition: transform 0.2s;
+  }
+
+  .navbar__mobile-chevron--open {
+    transform: rotate(180deg);
+  }
+
+  /* brand list inside mobile drawer */
+  .navbar__mobile-brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 12px 0 4px;
+  }
+
+  .navbar__mobile-brand {
+    background: #111;
+    border: none;
+    border-radius: 10px;
+    color: var(--color-text-muted);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .navbar__mobile-brand:hover {
+    background: #1a1a1a;
+    color: var(--color-text);
+  }
+
+  /* mobile CTA */
+  .navbar__cta--mobile {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}

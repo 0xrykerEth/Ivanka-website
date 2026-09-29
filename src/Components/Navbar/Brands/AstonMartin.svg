@@ -1,0 +1,10 @@
+<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Wings left -->
+  <path d="M4 20 Q8 10 18 14 Q28 18 34 20 Q28 22 18 26 Q8 30 4 20Z" fill="white" opacity="0.85"/>
+  <!-- Wings right -->
+  <path d="M116 20 Q112 10 102 14 Q92 18 86 20 Q92 22 102 26 Q112 30 116 20Z" fill="white" opacity="0.85"/>
+  <!-- Center oval -->
+  <ellipse cx="60" cy="20" rx="24" ry="13" fill="white" opacity="0.1" stroke="white" stroke-width="1.2"/>
+  <!-- AM text -->
+  <text x="60" y="25" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="white" letter-spacing="1">AM</text>
+</svg>

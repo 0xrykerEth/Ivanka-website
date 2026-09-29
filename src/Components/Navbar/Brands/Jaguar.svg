@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <!-- Leaping jaguar silhouette (simplified) -->
+  <path d="M8 28 C10 20 16 14 24 12 C28 11 30 13 28 16 C26 18 22 18 20 20 C18 22 20 26 24 25 C28 24 32 20 36 18 C42 15 50 14 56 16 C60 17 62 20 60 23 C58 25 54 25 52 27 C50 29 52 32 56 30 C62 27 70 22 78 20 C86 18 94 20 100 25 C104 28 104 32 100 33 C96 34 90 32 86 30 C82 28 80 25 76 24 C72 23 68 24 64 26 C60 28 56 31 52 32 C46 33 40 32 36 29 C32 26 30 22 26 22 C22 22 18 25 16 28 Z"
+        fill="currentColor" opacity="0.85"/>
+  <text x="60" y="40" font-family="Georgia,serif" font-size="9" font-weight="bold"
+        fill="currentColor" text-anchor="middle" letter-spacing="3">JAGUAR</text>
+</svg>

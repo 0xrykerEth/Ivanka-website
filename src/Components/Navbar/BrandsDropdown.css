@@ -1,0 +1,70 @@
+.brands-dropdown {
+  display: grid;
+  grid-template-columns: repeat(5, 160px);
+  grid-template-rows: repeat(3, 160px);
+  gap: 10px;
+  padding: 16px;
+
+  background: rgba(115, 115, 115, 0.3);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border: 1px solid rgba(64, 64, 64, 0.5);
+  border-radius: 20px;
+
+  /* fixed so it never triggers a page scrollbar / layout shift */
+  position: fixed;
+  top: 76px; /* navbar height (64px) + 12px gap */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  animation: dropdown-in 0.18s ease;
+}
+
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0);    }
+}
+
+.brands-dropdown__card {
+  background: #000;
+  border: none;
+  border-radius: 14px;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 12px;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.brands-dropdown__card:hover {
+  background: #111;
+}
+
+.brands-dropdown__logo {
+  max-width: 90px;
+  max-height: 90px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* "Many more" card */
+.brands-dropdown__card--more {
+  gap: 10px;
+}
+
+.brands-dropdown__more-label {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  color: var(--color-text);
+  white-space: nowrap;
+}
