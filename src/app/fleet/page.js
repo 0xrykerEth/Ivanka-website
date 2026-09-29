@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import FleetClient from '@/Pages/Fleet/Fleet.jsx'
 
 export const metadata = {
@@ -58,7 +59,9 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(fleetSchema) }}
       />
-      <FleetClient />
+      <Suspense fallback={null}>
+        <FleetClient />
+      </Suspense>
     </>
   )
 }
