@@ -94,14 +94,15 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .hero {
-    height: calc(38vh + 200px);
+    height: calc(38vh + 240px);
     min-height: unset;
   }
 
   .hero__video-wrap {
+    top: 0;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 160px;
+    padding-top: 200px;
   }
 
   .hero__video {
