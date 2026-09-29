@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from '@/Components/Navbar/Navbar'
 import Footer from '@/Components/Footer/Footer'
+import { strapiMedia } from '@/lib/strapiMedia'
 
 export const metadata = {
   title: 'Blog | Ivanka Rent a Car Dubai',
@@ -49,9 +50,7 @@ export default async function BlogPage({ searchParams }) {
               <div className="blog-list__grid">
                 {posts.map((post) => {
                   const { slug, blog_title, title, excerpt, published_date, cover } = post
-                  const coverUrl = cover?.url
-                    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${cover.url}`
-                    : null
+                  const coverUrl = strapiMedia(cover?.url)
 
                   return (
                     <Link key={post.documentId} href={`/blog/${slug}`} className="blog-card">

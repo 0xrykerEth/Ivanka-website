@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Navbar from '@/Components/Navbar/Navbar'
 import Footer from '@/Components/Footer/Footer'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
+import { strapiMedia } from '@/lib/strapiMedia'
 
 const STRAPI = process.env.NEXT_PUBLIC_STRAPI_URL
 
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: post.meta_title || post.blog_title || post.title,
       description: post.meta_description || post.excerpt || '',
-      images: post.cover?.url ? [`${STRAPI}${post.cover.url}`] : [],
+      images: post.cover?.url ? [strapiMedia(post.cover.url)] : [],
     },
   }
 }
@@ -40,7 +41,7 @@ export default async function PostPage({ params }) {
   if (!post) notFound()
 
   const { blog_title, title, content, bofu, faq, published_date, cover } = post
-  const coverUrl = cover?.url ? `${STRAPI}${cover.url}` : null
+  const coverUrl = strapiMedia(cover?.url)
 
   const faqItems = Array.isArray(faq) ? faq : []
 
